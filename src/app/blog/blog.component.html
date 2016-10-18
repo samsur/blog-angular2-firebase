@@ -5,7 +5,7 @@
 </h4>
 <div *ngFor="let item of items | async">
   <div class="blog-item">
-    <div class="blog-item-heading">{{item.title}}</div>
+    <div class="blog-item-heading" (click)="showDetails(item.$key)">{{item.title}}</div>
     <div class="blog-item-text">{{item.article}}</div>
     </div>
   </div>
