@@ -1,4 +1,23 @@
-# BlogAngular2Firebase
+# Blog Application using Angular 2 and Firebase
+
+A demo Blog application  built with Angular2 and AngularFire2. The demo features a Firebase backend with OAuth authentication
+
+## QuickStart:
+
+#### Firebase
+
+Create a free Firebase account at https://firebase.google.com
+Create a project from your Firebase account console
+Configure the authentication providers for your Firebase project from your Firebase account console 
+
+$ git clone https://github.com/samsur/blog-angular2-firebase.git
+
+$ cd blog-angular2-firebase
+
+$ npm install
+
+$ npm start
+
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.17.
 
