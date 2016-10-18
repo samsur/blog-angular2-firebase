@@ -6,7 +6,7 @@ import {AngularFire,FirebaseListObservable} from 'angularfire2'
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-  title = 'The Angular 2 and Firebase Blog';
+  title = 'Welcome to The Angular 2 and Firebase Blog';
   items:FirebaseListObservable<any>;
   constructor(private af: AngularFire) { }
 

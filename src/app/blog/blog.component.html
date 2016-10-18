@@ -1,9 +1,16 @@
 
 <div class="col-sm-10 col-sm-offset-1">
-<h3>
+<h4>
   {{title}}
-</h3>
-<table class="table">
+</h4>
+<div *ngFor="let item of items | async">
+  <div class="blog-item">
+    <div class="blog-item-heading">{{item.title}}</div>
+    <div class="blog-item-text">{{item.article}}</div>
+    </div>
+  </div>
+ 
+<!--<table class="table">
   <thead>
     <tr>
       <th>Id</th>
@@ -18,5 +25,5 @@
         <td>{{item.article}}</td>
         </tr>
       </tbody>
-</table>
+</table>-->
 </div>
