@@ -5,7 +5,8 @@ import { BlogDetailComponent} from './blog.detail.component';
 
 const blogRoutes: Routes = [
   { path: 'blog',  component: BlogComponent },
-  { path: 'blogdetail', component: BlogDetailComponent}
+  { path: 'blog/posts',  component: BlogDetailComponent },
+  { path: 'blog/posts/:id', component: BlogDetailComponent}
 ];
 @NgModule({
   imports: [ RouterModule.forChild(blogRoutes) ],
