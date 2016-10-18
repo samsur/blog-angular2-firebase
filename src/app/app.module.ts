@@ -6,6 +6,7 @@ import * as firebase from 'firebase';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { AppComponent } from './app.component';
 import {AppRoutingModule} from './app.routing'
+import {CKEditorModule} from 'ng2-ckeditor';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyDSzolJxhikyA4mP5W4-YvUitlS1kxQDPg",
@@ -28,6 +29,7 @@ export const firebaseAuthConfig = {
     FormsModule,
     HttpModule,
     AppRoutingModule,
+    CKEditorModule,
     AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig)
   ],
   providers: [],

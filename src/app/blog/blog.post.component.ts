@@ -8,9 +8,9 @@ import {AngularFire,FirebaseListObservable} from 'angularfire2'
 export class BlogPostComponent implements OnInit {
   title = 'The Angular 2 and Firebase Blog';
   constructor(private af: AngularFire) { }
-
+  ckeditorContent="this is test";
   ngOnInit() {
-    
+   
   }
 
 }
