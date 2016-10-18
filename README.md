@@ -7,7 +7,9 @@ A demo Blog application  built with Angular2 and AngularFire2. The demo features
 #### Firebase
 
 Create a free Firebase account at https://firebase.google.com
+
 Create a project from your Firebase account console
+
 Configure the authentication providers for your Firebase project from your Firebase account console 
 
 $ git clone https://github.com/samsur/blog-angular2-firebase.git
