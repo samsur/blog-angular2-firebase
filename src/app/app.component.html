@@ -1,22 +1,22 @@
 
-<div class="col-sm-10 col-sm-offset-1">
-<h3>
-  {{title}}
-</h3>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Title</th>
-      <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of items | async">
-        <td>{{item.$key}}</td>
-        <td>{{item.title}}</td>
-        <td>{{item.article}}</td>
-        </tr>
-      </tbody>
-</table>
-</div>
+<nav class='navbar navbar-default'>
+            <div class='container-fluid'>
+                <a class='navbar-brand'>{{pageTitle}}</a>
+                <ul class='nav navbar-nav'>
+                    <li><a [routerLink]="['/']">Home</a></li>
+                    <li><a [routerLink]="['/posts']">Posts</a></li>
+                </ul>
+            </div>
+        </nav>
+<div class="container-fluid">
+    
+    <div class="row">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+        
+      
+            
+       
+     
