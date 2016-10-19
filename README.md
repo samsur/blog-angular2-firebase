@@ -3,7 +3,7 @@
 A demo Blog application  built with Angular2 and AngularFire2. The demo features a Firebase backend with OAuth authentication
 
 
-#### PreRequisites
+#### Pre-Requisites
 
 Create a free Firebase account at https://firebase.google.com
 
