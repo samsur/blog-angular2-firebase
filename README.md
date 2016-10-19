@@ -2,9 +2,8 @@
 
 A demo Blog application  built with Angular2 and AngularFire2. The demo features a Firebase backend with OAuth authentication
 
-## QuickStart:
 
-#### Firebase
+#### PreRequisites
 
 Create a free Firebase account at https://firebase.google.com
 
@@ -12,13 +11,28 @@ Create a project from your Firebase account console
 
 Configure the authentication providers for your Firebase project from your Firebase account console 
 
+Install the angular-cli 
+
+For windows users, open up command prompt as an administrator and run the command
+
+npm install -g angular-cli
+
+For Mac/Linux users, run the command in the terminal
+sudo npm install -g angular-cli
+
+
+### QuickStart:
 $ git clone https://github.com/samsur/blog-angular2-firebase.git
 
 $ cd blog-angular2-firebase
 
 $ npm install
 
-$ npm start
+$ ng build
+
+$ ng serve
+
+Open up a browser and navigate to http://localhost:4200
 
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.17.
