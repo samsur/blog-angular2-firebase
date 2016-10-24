@@ -2,8 +2,15 @@
 <h3>
   {{title}}
 </h3>
-Here is the post
-Here is the detail!
+
+{{item |async|json}}
+<div>
+  <div class="blog-item">
+    <div class="blog-item-heading" (click)="showDetails(item.$key)">{{ (item | async)?.title }}</div>
+    <div class="blog-item-text">{{ (item | async)?.article }}</div>
+    </div>
+  </div>
+
 <simple-tiny
   [elementId]="'my-editor-id'"
   (onEditorKeyup)="keyupHandlerFunction($event)"
