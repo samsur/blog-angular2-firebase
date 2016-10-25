@@ -4,6 +4,7 @@ import { BlogComponent } from './blog.component';
 import { BlogDetailComponent } from './blog.detail.component';
 import {BlogPostComponent} from './blog.post.component';
 import {BlogRoutingModule} from './blog.routing';
+import {BlogPostEditComponent} from './blog.post.edit.component';
 import { FormsModule } from '@angular/forms';
 import{TinyMceEditorComponent} from   '../shared/tinymce.editor.component';
 @NgModule({
@@ -16,6 +17,7 @@ import{TinyMceEditorComponent} from   '../shared/tinymce.editor.component';
     BlogComponent,
     BlogDetailComponent,
     BlogPostComponent,
+    BlogPostEditComponent,
     TinyMceEditorComponent
     ]
 })

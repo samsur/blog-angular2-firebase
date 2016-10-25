@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { BlogComponent }   from './blog.component';
 import { BlogDetailComponent} from './blog.detail.component';
 import{ BlogPostComponent} from './blog.post.component';
+import {BlogPostEditComponent} from './blog.post.edit.component';
 
 const blogRoutes: Routes = [
   { path: 'blog',  component: BlogComponent },
   { path: 'blog/posts',  component: BlogDetailComponent },
-    { path: 'blog/post/:id',  component: BlogDetailComponent },
+  { path: 'blog/post/:id',  component: BlogDetailComponent },
+  { path: 'blog/post/edit/:id',  component: BlogPostEditComponent },
   { path: 'blog/posts/:id', component: BlogPostComponent}
 ];
 @NgModule({

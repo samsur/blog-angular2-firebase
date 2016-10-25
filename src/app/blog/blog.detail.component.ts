@@ -15,7 +15,7 @@ export class BlogDetailComponent implements OnInit {
     this.items = this.af.database.list('posts');
   }
 showDetails(id:any):void{
-  this.router.navigateByUrl('/blog/posts/' +id);
+  this.router.navigateByUrl('/blog/post/edit/'+id);
   console.log(id);
 }
 }
