@@ -24,7 +24,9 @@ export class BlogPostEditComponent implements OnInit, OnDestroy{
           console.log(snapshot.key)
           this.title = snapshot.val().title;
           this.article = snapshot.val().article;
+          if(this.article !=null){
           tinymce.get(this.editorId).setContent(this.article);
+          }
         });
     });
   }
@@ -34,7 +36,10 @@ export class BlogPostEditComponent implements OnInit, OnDestroy{
 
   keyupHandlerFunction(content:any):void{
     this.article=content;
-    console.log(this.title);
-    console.log(this.article);
+  }
+  save():void{
+    this.item.update({title:this.title, article:this.article});
+
+    console.log('saved');
   }
 }

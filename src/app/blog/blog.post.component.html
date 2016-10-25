@@ -6,8 +6,8 @@
 {{item |async|json}}
 <div>
   <div class="blog-item">
-    <div class="blog-item-heading" (click)="showDetails(item.$key)">{{ (item | async)?.title }}</div>
-    <div class="blog-item-text">{{ (item | async)?.article }}</div>
+    <div class="blog-item-heading" (click)="showDetails(item.$key)" >{{ (item | async)?.title }}</div>
+    <div class="blog-item-text" [innerHTML]="(item | async)?.article"></div>
     </div>
   </div>
 
