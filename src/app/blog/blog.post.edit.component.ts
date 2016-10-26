@@ -1,6 +1,6 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {AngularFire,FirebaseObjectObservable} from 'angularfire2'
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
     selector:'blog-post-edit',
     templateUrl: './blog.post.edit.component.html'
@@ -12,7 +12,7 @@ export class BlogPostEditComponent implements OnInit, OnDestroy{
     title:string;
     article:string;
     editorId: string = 'my-editor-id';
-    constructor(private af: AngularFire, private route: ActivatedRoute){
+    constructor(private af: AngularFire, private route: ActivatedRoute, private router:Router){
 
     }
     ngOnInit() {
@@ -24,9 +24,7 @@ export class BlogPostEditComponent implements OnInit, OnDestroy{
           console.log(snapshot.key)
           this.title = snapshot.val().title;
           this.article = snapshot.val().article;
-          if(this.article !=null){
-          tinymce.get(this.editorId).setContent(this.article);
-          }
+          
         });
     });
   }
@@ -39,7 +37,7 @@ export class BlogPostEditComponent implements OnInit, OnDestroy{
   }
   save():void{
     this.item.update({title:this.title, article:this.article});
-
+    this.router.navigateByUrl('/blog/posts');
     console.log('saved');
   }
 }

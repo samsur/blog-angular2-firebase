@@ -1,20 +1,24 @@
-<div class="col-sm-12">
+<div class="col-sm-10 col-sm-offset-1">
 <h1>
   {{title}}
 </h1>
  <div class="form-group">
 
-    <input type="text" class="form-control" id="title" [(ngModel)]="title">
+    <input type="text" class="form-control" id="title" [(ngModel)]="title"/>
+  </div>
+<div class="form-group">
+
+    <textarea class="form-control" id="article" [(ngModel)]="article"></textarea>
   </div>
 
 <div>
   
-
+<!--
 <simple-tiny
   [elementId]="editorId" [info]="article"
   (onEditorKeyup)="keyupHandlerFunction($event)"
   >
-</simple-tiny>
+</simple-tiny>-->
 <div class="form-group">
 <p>
 <button type="submit" class="btn btn-primary pull-right" (click)="save()">Save</button>
