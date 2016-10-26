@@ -1,10 +1,14 @@
 .blog-item{
-    border-bottom: 1px solid #ddd;
+    
     padding:10px;
 }
 .blog-item-heading
 {
-    font-size:24px;
+    font-size:40px;
     color: #1ab394;
     cursor: pointer;
+}
+.blog-item-text
+{
+    padding-top:20px;
 }

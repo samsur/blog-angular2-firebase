@@ -1,18 +1,17 @@
 <div class="col-sm-12">
-<h3>
-  {{title}}
-</h3>
 
-{{item |async|json}}
 <div>
   <div class="blog-item">
-    <div class="blog-item-heading" (click)="showDetails(item.$key)" >{{ (item | async)?.title }}</div>
-    <div class="blog-item-text" [innerHTML]="(item | async)?.article"></div>
+    <div class="blog-item-heading">
+  {{ (item | async)?.title }}
+</div>
+
+      <div class="blog-item-text" [innerHTML]="(item | async)?.article"></div>
     </div>
   </div>
 
-<simple-tiny
+<!--<simple-tiny
   [elementId]="'my-editor-id'"
   (onEditorKeyup)="keyupHandlerFunction($event)"
   >
-</simple-tiny>
+</simple-tiny>-->

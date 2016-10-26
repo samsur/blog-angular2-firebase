@@ -6,22 +6,18 @@
 
     <input type="text" class="form-control" id="title" [(ngModel)]="title"/>
   </div>
-<div class="form-group" *ngIf ="i !=0">
-
-    <textarea class="form-control" id="article" [(ngModel)]="article" rows="10"></textarea>
-  </div>
 
 <div>
   
-<div *ngIf ="i==0">
+<div>
 <simple-tiny
-  [elementId]="editorId" [info]="article"
+  [elementId]="'my-editor-id'"
   (onEditorKeyup)="keyupHandlerFunction($event)"
   >
 </simple-tiny>
 </div>
 <div class="form-group">
 <p>
-<button type="submit" class="btn btn-primary pull-right" (click)="save()">Save</button>
+<button type="submit" class="btn btn-primary pull-right" (click)="add()">Save</button>
 </p>
 </div>

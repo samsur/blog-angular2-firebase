@@ -7,7 +7,7 @@ import {AngularFire,FirebaseListObservable} from 'angularfire2'
   styleUrls: ['./blog.component.css']
 })
 export class BlogDetailComponent implements OnInit {
-  title = 'Welcome to The Angular 2 and Firebase Blog';
+  title = 'Latest Posts';
   items:FirebaseListObservable<any>;
   constructor(private af: AngularFire, private router:Router) { }
 
@@ -15,7 +15,19 @@ export class BlogDetailComponent implements OnInit {
     this.items = this.af.database.list('posts');
   }
 showDetails(id:any):void{
-  this.router.navigateByUrl('/blog/post/edit/'+id);
+  this.router.navigateByUrl('/blog/post/'+id);
   console.log(id);
+}
+htmlToPlaintext(text:string) {
+  return text ? String(text).replace(/<[^>]+>/gm, '') : '';
+}
+shorten(text:string){
+  if(text.length>200){
+    text=text.substr(0,200);
+  }
+  return text;
+}
+new():void{
+  this.router.navigateByUrl('/blog/post/new/item')
 }
 }

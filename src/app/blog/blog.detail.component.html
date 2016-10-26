@@ -1,12 +1,17 @@
 
 <div class="col-sm-10 col-sm-offset-1">
-<h4>
+
+<div style="padding-bottom:20px">
+    <h1>
   {{title}}
-</h4>
+</h1>
+    <button type="button" class="btn btn-primary pull-right" (click)="new()">Add New Post</button>
+    </div>
 <div *ngFor="let item of items | async">
   <div class="blog-item">
     <div class="blog-item-heading" (click)="showDetails(item.$key)">{{item.title}}</div>
-    <div class="blog-item-text">{{item.article}}</div>
+    <div class="blog-item-text">{{shorten(htmlToPlaintext(item.article))}}</div>
+
     </div>
   </div>
  
